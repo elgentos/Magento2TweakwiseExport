@@ -40,7 +40,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function emergency($message, array $context = [])
+    public function emergency(string|\Stringable $message, array $context = []): void
     {
         $this->log->emergency('[TweakWise] ' . $message, $context);
     }
@@ -48,7 +48,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function alert($message, array $context = [])
+    public function alert(string|\Stringable $message, array $context = []): void
     {
         $this->log->alert('[TweakWise] ' . $message, $context);
     }
@@ -56,7 +56,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function critical($message, array $context = [])
+    public function critical(string|\Stringable $message, array $context = []): void
     {
         $this->log->critical('[TweakWise] ' . $message, $context);
     }
@@ -64,7 +64,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function error($message, array $context = [])
+    public function error(string|\Stringable $message, array $context = []): void
     {
         $this->log->error('[TweakWise] ' . $message, $context);
     }
@@ -72,7 +72,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function warning($message, array $context = [])
+    public function warning(string|\Stringable $message, array $context = []): void
     {
         $this->log->warning('[TweakWise] ' . $message, $context);
     }
@@ -80,7 +80,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function notice($message, array $context = [])
+    public function notice($message, array $context = []): void
     {
         $this->log->notice('[TweakWise] ' . $message, $context);
     }
@@ -88,7 +88,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function info($message, array $context = [])
+    public function info($message, array $context = []): void
     {
         $this->log->info('[TweakWise] ' . $message, $context);
     }
@@ -96,7 +96,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function debug($message, array $context = [])
+    public function debug($message, array $context = []): void
     {
         if ($this->enableDebugLog) {
             $this->log->debug('[TweakWise] ' . $message, $context);
@@ -106,7 +106,7 @@ class Logger implements LoggerInterface
     /**
      * {@inheritdoc}
      */
-    public function log($level, $message, array $context = [])
+    public function log($level, $message, array $context = []): void
     {
         $this->log->log($level, '[TweakWise] ' . $message, $context);
     }
